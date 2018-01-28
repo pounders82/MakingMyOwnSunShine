@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MakingMyOwnSunshine</title>
+    <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body style="padding-top: 65px;">
+  <%= render 'layouts/navigation' %> <!-- This is the navigation bar -->
+  <%= render 'layouts/messages' %>
+
+  <div class="container"> <!-- This container class creates a small amount of padding on left and right -->
+    <%= yield %>
+  </div>
+
+  <%= render 'layouts/footers' %>
+  </body>
+
+</html>
