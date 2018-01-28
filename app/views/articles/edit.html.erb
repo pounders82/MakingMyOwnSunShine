@@ -1,0 +1,11 @@
+<h1 align="center">Edit Existing Article</h1>
+
+<% if @article.errors.any? %>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+<%= render "form" %>

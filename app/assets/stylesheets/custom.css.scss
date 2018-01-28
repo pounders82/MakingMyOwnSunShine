@@ -1,0 +1,46 @@
+$navbar-default-bg:#FFFFFF;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo{
+  color: black;
+}
+
+.text_over_image{
+  position: absolute;
+  left: 0;
+  top:50%;
+  width:100%;
+  text-align: center;
+  color:#FFFFFF;
+}
+.jumbotron{
+  padding-top: 30px;
+  background-color:#000000;
+  text-align:center;
+}
+
+.btn-primary{
+
+}
+
+footer{
+  position: relative;bottom: 0;
+}
+
+.article-actions{
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.article-title{
+  font-weight: bold;
+  font-size: large;
+}
+
+.article-body{
+  border-top: 1px solid #eaeaea;
+  padding-top: 10px;
+}
+
