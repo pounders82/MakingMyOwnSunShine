@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4b94c53-f644-45a7-a3e4-82cbb8cc17cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MakingMyOwnSunshine.iml" afterPath="$PROJECT_DIR$/.idea/MakingMyOwnSunshine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
-    </list>
+    <list default="true" id="f4b94c53-f644-45a7-a3e4-82cbb8cc17cd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -641,12 +637,12 @@
       <workItem from="1516919141737" duration="1703000" />
       <workItem from="1516921483064" duration="410000" />
       <workItem from="1516922737751" duration="1054000" />
-      <workItem from="1517168521526" duration="2808000" />
+      <workItem from="1517168521526" duration="3165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14485000" />
+    <option name="totallyTimeSpent" value="14842000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
