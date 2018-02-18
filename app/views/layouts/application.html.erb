@@ -18,6 +18,7 @@
   </div>
 
   <%= render 'layouts/footers' %>
+  <%= debug(params) if Rails.env.development? %> <!-- This shows controller, errors, params in devlopment -->
   </body>
 
 </html>

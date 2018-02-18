@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180128202358) do
+ActiveRecord::Schema.define(version: 20180218010357) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.integer "user_id"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
