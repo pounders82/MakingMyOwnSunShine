@@ -11,12 +11,13 @@
   <div class="article-actions">
     <%= link_to "View Articles", articles_path, class: "btn btn-xs btn-primary" %>
 
+    <% if logged_in? && current_user == @article.user %>
     <%= link_to "Edit Article", edit_article_path(@article), class: "btn btn-xs btn-success" %>
 
     <%= link_to "Delete Article", article_path(@article), method: :delete,
                 data: { confirm: "Are your sure?"},
                 class: "btn btn-xs btn-danger" %>
-
+  <% end %>
   </div>
 
 
