@@ -3,6 +3,7 @@
 <h2 align="center"><%= @article.title %> </h2>
 
 <div class="well col-xs-8 col-xs-offset-2">
+
   <h4 class="center"></h4>
   <hr>
     <%= simple_format(@article.description.html_safe) %>
@@ -15,5 +16,23 @@
     <%= link_to "Delete Article", article_path(@article), method: :delete,
                 data: { confirm: "Are your sure?"},
                 class: "btn btn-xs btn-danger" %>
+
   </div>
+
+
+  <ul class="listing">
+    <div class="row">
+      <div align="center">
+        <li>Created by:</li>
+        <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+
+        <li class="article-title">
+          <%= link_to @article.user.username, user_path(@article.user) %>
+        </li>
+        <li>
+          <small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small>
+        </li>
+      </div>
+    </div>
+  </ul>
 </div>

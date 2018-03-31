@@ -26,8 +26,10 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Articles</a>
         <ul class="dropdown-menu">
           <li><%= link_to("Articles List",articles_path) %></li>
-          <li><%= link_to "New Article", new_article_path %></li>
-          <li><a href="#">Something else here</a></li>
+          <% if logged_in? %>
+            <li><%= link_to "New Article", new_article_path %></li>
+          <% end %>
+          <li><%= link_to "Users Page", users_path %></li>
           <li role="separator" class="divider"></li>
           <li><a href="#">Separated link</a></li>
         </ul>
@@ -44,8 +46,25 @@
         </li>
 
         <li><%= link_to "Contact", contact_path, class: "nav navbar-nav" %></li>
-        <li><%= link_to "Sign Up", contact_path, class: "nav navbar-nav" %></li>
-        <li><%= link_to "Login", contact_path, class: "nav navbar-nav" %></li>
+
+        <!-- If user is logged in displays Log out else Sign up or Login is displayed -->
+        <% if current_user %>
+            <li><%= link_to "Log out", logout_path,method: :delete, class: "nav navbar-nav" %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Profile</a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Edit your profile",edit_user_path(current_user) %></li>
+                <li><%= link_to "View your profile", user_path(current_user)%></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+        <% else %>
+            <li><%= link_to "Sign Up", signup_path, class: "nav navbar-nav" %></li>
+            <li><%= link_to "Login", login_path, class: "nav navbar-nav" %></li>
+
+        <% end %>
         <li><a href="http://www.facebook.com"><i style="color: blue; font-size:24px" class="fa fa-facebook-official"></i></a></li>
 
       </ul>

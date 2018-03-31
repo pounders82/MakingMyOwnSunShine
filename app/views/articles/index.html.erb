@@ -1,29 +1,10 @@
 <h1 align="center">Listing All Articles</h1>
 <div class="col-xs-8 col-xs-offset-2" style="padding-bottom: 5px"><%= link_to "Create new article", new_article_path, class: "btn btn-xs btn-primary" %></div>
 
-
-  <% @articles.each do |article| %>
-    <div class="row">
-      <div class="col-xs-8 col-xs-offset-2">
-        <div class="well well-lg">
-          <div class="article-title">
-            <%= link_to article.title, article_path(article)%>
-          </div>
-          <div class="article-body">
-            <%= truncate(article.description.html_safe, length:100, :escape => false)  %>
-          </div>
-
-        <div class="article-actions">
-
-          <%= link_to "Edit Article", edit_article_path(article), class: "btn btn-xs btn-success  float1" %>
-
-          <%= link_to "Delete Article", article_path(article), method: :delete,
-                      data: { confirm: "Are your sure?"},
-                      class: "btn btn-xs btn-danger  float1" %>
-        </div>
-      </div>
-    </div>
-    </div>
-
-
-      <% end %>
+<div align="center">
+  <%= will_paginate %>
+</div>
+<%= render 'article', obj: @articles %>
+<div align="center">
+  <%= will_paginate %>
+</div>

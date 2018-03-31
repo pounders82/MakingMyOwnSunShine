@@ -26,10 +26,15 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 gem "ckeditor", :git => "https://github.com/galetahub/ckeditor.git"
-gem "paperclip"
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'jquery-rails'
+gem 'bcrypt', '~> 3.1.7'
+gem 'i18n', '~> 0.9.5'
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'bootstrap-will_paginate'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
