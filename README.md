@@ -22,3 +22,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+
+
+## General info
+
+	
+## Technologies
+Project is created with:
+* Ruby version: 
+* Ruby on Rails version: 
+* RubyMine IDE
